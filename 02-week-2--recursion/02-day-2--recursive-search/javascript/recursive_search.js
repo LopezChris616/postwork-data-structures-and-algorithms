@@ -1,5 +1,14 @@
 function recursiveSearch(arr, target) {
   // type your code here
+  if(arr.length === 0) {
+    return false;
+  }
+
+  if(arr[0] === target) {
+    return true;
+  }
+
+  return recursiveSearch(arr.slice(1), target);
 }
 
 if (require.main === module) {
@@ -15,5 +24,11 @@ if (require.main === module) {
 
 module.exports = recursiveSearch;
 
-// Please add your pseudocode to this file
+/* Please add your pseudocode to this file
+  if length of arr is 0
+    return false
+  if first el in arr is target
+    return true
+  return call to func with arr sliced by 1
+*/
 // And a written explanation of your solution
